@@ -15,7 +15,7 @@ export default function Mobile() {
   useEffect(() => {
     setValue(data);
     console.log(data);
-  }, [data]);
+  }, [data, setValue]);
 
   const formatPhone = (number) => {
     const temp = number.split("");
@@ -31,9 +31,7 @@ export default function Mobile() {
             <h3>{item.name}</h3>{" "}
             <p>{`${item.street} ${item.city} ${item.state}, ${item.postal_code}`}</p>
             <p>{formatPhone(item.phone)}</p>
-            <a target="_blank" href={item.website_url}>
-              {item.website_url}
-            </a>
+            <a href={item.website_url}>{item.website_url}</a>
           </Popup>
         </Marker>
       );
