@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./components/styles/styles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+import Mobile from "./components/Map";
+import { DataContext } from "./context/DataProvider";
+
+export default function App() {
+  const [value, setValue] = useState("");
+  const [search, setSearch] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DataContext.Provider
+      value={{
+        value,
+        setValue,
+        search,
+        setSearch,
+      }}
+    >
+      <div className="App">
+        <Mobile />
+      </div>
+    </DataContext.Provider>
   );
 }
-
-export default App;
