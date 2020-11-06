@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./components/styles/styles.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 import Mobile from "./components/Map";
 import { DataContext } from "./context/DataProvider";

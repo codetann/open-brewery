@@ -7,10 +7,13 @@
   position: absolute;
   z-index: 1;
   width: 95%;
-  height: 8vh;
+  height: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: white;
   border-radius: 5px;
-  bottom: 30px;
+  bottom: 40px;
   left: 2.5%;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -33,6 +36,7 @@
   border: none;
   font-size: 18px;
   outline: none;
+  cursor: pointer;
 }
 
 .desktop {

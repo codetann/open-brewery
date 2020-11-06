@@ -1,16 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Open Brewery
 
-## Available Scripts
+This project was made possible with React, React-Leaflet, and the Open Brewery API.
 
-In the project directory, you can run:
+## About this project
 
-### `npm start`
+I wanted to take a challege and use multipule technologies to create a Web Application.<br/>
+The react app pulls in information from the Open Brewery API and then displays the information on the Leaflet Map.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `demo`
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The app is live at
 
 ### `npm test`
 

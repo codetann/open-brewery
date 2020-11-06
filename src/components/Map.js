@@ -56,7 +56,20 @@ export default function Mobile() {
 
       {status === "fetched" && (
         <>
-          {data === [] && null}
+          {!data[0].latitude === undefined && <p>WORKING</p>}
+          {data[0].latitude === null && (
+            <MapContainer
+              className="mobile"
+              center={[40.73267145, -111.899319900472]}
+              zoom={13}
+              scrollWheelZoom={false}
+            >
+              <TileLayer
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+            </MapContainer>
+          )}
           {data.length > 1 && (
             <MapContainer
               className="mobile"
@@ -73,9 +86,12 @@ export default function Mobile() {
           )}
         </>
       )}
-
       <div className="search-container">
-        <input onChange={(e) => setSearch(e.target.value)} type="text" />
+        <input
+          placeholder="Search by State..."
+          onChange={(e) => setSearch(e.target.value)}
+          type="text"
+        />
         <button onClick={apiSearch} className="search-btn">
           <i className="fas fa-search"></i>
         </button>
