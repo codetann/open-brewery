@@ -9,7 +9,7 @@ The react app pulls in information from the Open Brewery API and then displays t
 
 ### `demo`
 
-The app is live at
+The app is live at https://sharp-kare-eca3bb.netlify.app/
 
 ### `npm test`
 
